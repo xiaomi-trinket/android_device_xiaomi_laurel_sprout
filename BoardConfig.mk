@@ -17,6 +17,9 @@ TARGET_OTA_ASSERT_DEVICE := laurel_sprout
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 AUDIO_FEATURE_ENABLED_DLKM := false
 
+# Display
+TARGET_SCREEN_DENSITY := 440
+
 # A/B manifest.
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
