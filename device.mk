@@ -13,7 +13,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-pa
 
 # A/B
 AB_OTA_UPDATER := true
@@ -68,6 +69,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
+
+# Fingerprint feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
+    vendor/pa/config/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml
+
+PRODUCT_PACKAGES += \
+    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.xiaomi_laurel_sprout
 
 # Ramdisk
 PRODUCT_PACKAGES += \
