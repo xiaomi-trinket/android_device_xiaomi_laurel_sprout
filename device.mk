@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
     libspkrprot \
     libtinycompress.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom
