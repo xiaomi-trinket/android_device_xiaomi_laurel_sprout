@@ -8,6 +8,9 @@
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
