@@ -22,7 +22,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
-TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
+KERNEL_DEFCONFIG := vendor/laurel_sprout-perf_defconfig
 
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
