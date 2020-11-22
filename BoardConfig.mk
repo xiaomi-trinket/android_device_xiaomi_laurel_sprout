@@ -23,10 +23,6 @@ TARGET_SCREEN_DENSITY := 440
 # A/B manifest.
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
-# Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
-KERNEL_DEFCONFIG := vendor/laurel_sprout-perf_defconfig
-
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
 BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216
